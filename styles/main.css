@@ -1,5 +1,6 @@
 
-:root {
+:root,
+:root.dark {
 	--background-color: #171717;
 	--surface-color: #444444;
 	--surface-color-highlighted: #555555;
@@ -7,6 +8,16 @@
 	--primary-color: #726a95;
 	--primary-color-highlighted: #9b8fd1;
 	--on-surface: #cdcdcd;
+}
+
+:root.light {
+	--background-color: #999999;
+	--surface-color: #c0c0c0;
+	--surface-color-highlighted: #dddddd;
+	--surface-color-2: #b0b0b0;
+	--primary-color: #ae9bff;
+	--primary-color-highlighted: #c9bdff;
+	--on-surface: #000000;
 }
 
 body {
@@ -58,22 +69,6 @@ a {
 	line-height: 1.5rem;
 }
 
-.navigation-bar {
-	display: none;
-	justify-content: left;
-	position: fixed;
-	top: 1.5rem;
-	left: 1.5rem;
-	right: 1.5rem;
-	padding: 1rem;
-	background-color: var(--surface-color-2);
-	border-radius: 1rem;
-}
-
-.navigation-bar-list {
-	flex-grow: 1;
-}
-
 .navigation-bar-item {
 	background-color: var(--primary-color);
 	color: var(--on-surface);
@@ -81,6 +76,31 @@ a {
 	margin: 1rem;
 	padding: 0.5rem;
 	border-radius: 0.5rem;
+}
+
+.theme-switch-alignment {
+	display: flex;
+	justify-content: center;
+}
+
+.theme-switch-container {
+	display: inline-block;
+	width: 4rem;
+	height: 2rem;
+	margin: 0.5rem;
+	background-color: var(--surface-color);
+	border-radius: 1rem;
+	cursor: pointer;
+}
+
+.theme-switch-slider {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin: 0.2rem;
+	background-color: var(--on-surface);
+	border-radius: 1rem;
+	transform: translateX(2rem);
+	transition: transform .2s;
 }
 
 .open-menu-button, .close-menu-button {
@@ -102,12 +122,12 @@ a {
 
 .section-link {
 	flex: 1;
-	margin: 1rem;
-	margin-bottom: 2rem;
 }
 
 .section-card {
 	color: var(--on-surface);
+	margin: 1rem;
+	margin-bottom: 2.5rem;
 	padding: 1rem;
 	text-align: center;
 	background-color: var(--surface-color);
@@ -165,5 +185,25 @@ a {
 
 	.open-menu-button, .close-menu-button {
 		display: none;
+	}
+}
+
+@media only screen and (max-width: 50rem) {
+	.navigation-bar {
+		all: initial;
+		display: none;
+		position: fixed;
+		top: 1.5rem;
+		left: 1.5rem;
+		right: 1.5rem;
+		padding: 1rem;
+		background-color: var(--surface-color-2);
+		border-radius: 1rem;
+	}
+	
+	.navigation-bar-list {
+		all: initial;
+		flex-grow: 1;
+		justify-content: center;
 	}
 }
