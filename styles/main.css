@@ -1,0 +1,169 @@
+
+:root {
+	--background-color: #171717;
+	--surface-color: #444444;
+	--surface-color-highlighted: #555555;
+	--surface-color-2: #222222;
+	--primary-color: #726a95;
+	--primary-color-highlighted: #9b8fd1;
+	--on-surface: #cdcdcd;
+}
+
+body {
+	margin: 1.5rem;
+	margin-top: 8rem;
+	background-color: var(--background-color);
+	color: var(--on-surface);
+	font-family: "roboto";
+}
+
+a {
+	color: var(--on-surface);
+	text-decoration: none;
+}
+
+.pixel-art {
+	image-rendering: pixelated;
+}
+
+.main-header {
+	font-weight: bold;
+	position: fixed;
+	top: 1.5rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--surface-color-2);
+	border-radius: 1rem;
+	z-index: 2;
+}
+
+.logo-and-name {
+	display: flex;
+	justify-content: left;
+}
+
+.logo {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 0.5rem;
+	margin-right: 1rem;
+}
+
+.name {
+	font-size: 1rem;
+	color: var(--on-surface);
+	line-height: 1.5rem;
+}
+
+.navigation-bar {
+	display: none;
+	justify-content: left;
+	position: fixed;
+	top: 1.5rem;
+	left: 1.5rem;
+	right: 1.5rem;
+	padding: 1rem;
+	background-color: var(--surface-color-2);
+	border-radius: 1rem;
+}
+
+.navigation-bar-list {
+	flex-grow: 1;
+}
+
+.navigation-bar-item {
+	background-color: var(--primary-color);
+	color: var(--on-surface);
+	text-align: center;
+	margin: 1rem;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+}
+
+.open-menu-button, .close-menu-button {
+	width: 2rem;
+	height: 2rem;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.close-menu-button-container {
+	display: flex;
+	justify-content: right;
+}
+
+.hero {
+	margin: auto;
+	align-items: flex-start;
+}
+
+.section-link {
+	flex: 1;
+	margin: 1rem;
+	margin-bottom: 2rem;
+}
+
+.section-card {
+	color: var(--on-surface);
+	padding: 1rem;
+	text-align: center;
+	background-color: var(--surface-color);
+	border-radius: 1rem;
+	transition: transform .2s;
+}
+
+.section-card-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.section-card-image {
+	margin-top: 1em;
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.section-card-description {
+	margin-top: 1em;
+	padding: 1rem;
+	background-color: var(--primary-color);
+	border-radius: 1rem;
+}
+
+@media only screen and (min-width: 34rem) {
+	.hero {
+		width: 30rem;
+	}
+}
+
+@media only screen and (min-width: 60rem) {
+	.hero {
+		width: 60rem;
+		display: flex;
+	}
+}
+
+@media only screen and (min-width: 50rem) {
+	.navigation-bar {
+		all: initial;
+	}
+
+	.navigation-bar-list {
+		all: initial;
+		display: flex;
+	}
+
+	.navigation-bar-item {
+		margin: 0rem;
+		margin-top: 0.25rem;
+		margin-right: 1rem;
+		padding: 0.5rem;
+	}
+
+	.open-menu-button, .close-menu-button {
+		display: none;
+	}
+}
