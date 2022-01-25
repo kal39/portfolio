@@ -1,24 +1,21 @@
-const sectionCards = document.querySelectorAll(".section-card");
+const openMenu = document.querySelector(".open-menu-button");
+const closeMenu = document.querySelector(".close-menu-button");
+const navBar = document.querySelector(".navigation-bar");
 const highlightItems = document.querySelectorAll(".highlight-item"); 
 
 function primaryColor() {
 	return getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
 }
-
 function primaryColorHighlighted() {
 	return getComputedStyle(document.documentElement).getPropertyValue("--primary-color-highlighted");
 }
 
-sectionCards.forEach(element => {
-	element.addEventListener("mouseenter", () => {
-		element.style.transform = "scale(1.1)";
-	});
+openMenu.addEventListener("click", () => {
+	navBar.style.display = "flex";
 });
 
-sectionCards.forEach(element => {
-	element.addEventListener("mouseleave", () => {
-		element.style.transform = "scale(1)";
-	});
+closeMenu.addEventListener("click", () => {
+	navBar.style.display = "none";
 });
 
 highlightItems.forEach(element => {

@@ -1,0 +1,89 @@
+.hero {
+	margin: auto;
+	align-items: flex-start;
+}
+
+.section-link {
+	flex: 1;
+	margin: 1rem;
+}
+
+.section-card {
+	color: var(--on-surface);
+	margin-bottom: 1rem;
+	padding: 1rem;
+	text-align: center;
+	background-color: var(--surface-color);
+	border-radius: 1rem;
+	transition: transform .2s;
+}
+
+.section-card-title {
+	color: var(--on-surface);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.section-card-image {
+	margin-top: 1em;
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.section-card-description {
+	margin-top: 1em;
+	padding: 1rem;
+	color: var(--on-surface);
+	background-color: var(--primary-color);
+	border-radius: 1rem;
+}
+
+.contact {
+	background-color: var(--surface-color);
+	color: var(--on-surface);
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.contact-title {
+	text-align: center;
+	color: var(--on-surface);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.contact-method {
+	flex: 1;
+	background-color: var(--surface-color-2);
+	margin: 0.5rem;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	text-align: center;
+}
+
+.contact-link {
+	border-radius: 0.5rem;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+}
+
+@media only screen and (min-width: 34rem) {
+	.container {
+		width: 30rem;
+	}
+}
+
+@media only screen and (min-width: 60rem) {
+	.container {
+		width: 60rem;
+	}
+
+	.hero {
+		display: flex;
+	}
+
+	.contact-method-container {
+		display: flex;
+	}
+}

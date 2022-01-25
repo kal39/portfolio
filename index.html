@@ -7,6 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/index.css">
+	<link rel="icon" href="assets/logo.png">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<!-- main font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,39 +20,7 @@
 
 <body>
 	<div class="container">
-		<header class="main-header">
-			<a class="logo-and-name" href="index.html">
-				<img class="logo pixel-art" src="assets/logo.png" alt="logo">
-				<div class="name">Kai <br> Kitagawa-Jones</div>
-			</a>
-
-			<nav class="navigation-bar">
-				<div class="navigation-bar-list">
-					<a href="index.html">
-						<div class="navigation-bar-item highlight-item">Home</div>
-					</a>
-					<a href="#">
-						<div class="navigation-bar-item highlight-item">Projects </div>
-					</a>
-					<a href="#">
-						<div class="navigation-bar-item highlight-item"> Photos </div>
-					</a>
-					<a href="#">
-						<div class="navigation-bar-item highlight-item"> Art </div>
-					</a>
-					<div class="theme-switch-alignment">
-						<div class="theme-switch-container">
-							<div class="theme-switch-slider"></div>
-						</div>
-					</div>
-				</div>
-
-				<img class="close-menu-button pixel-art" src="assets/hamburger.png" alt="close menu">
-
-			</nav>
-
-			<img class="open-menu-button pixel-art" src="assets/hamburger.png" alt="open menu">
-		</header>
+		<div id="header"></div>
 
 		<section class="hero">
 			<a class="section-link" href="#">
@@ -76,7 +47,7 @@
 			<a class="section-link" href="#">
 				<div class="section-card">
 					<div class="section-card-title">Art</div>
-					<img class="section-card-image" src="assets/logo.png" alt="car">
+					<img class="section-card-image" src="assets/car.jpeg" alt="car">
 					<div class="section-card-description">
 						Nothing here yet.
 					</div>
@@ -106,7 +77,16 @@
 				</div>
 			</div>
 		</section>
+
+		<div id="footer"></div>
 	</div>
+
+	<script>
+		$(function () {
+			$("#header").load("pages/header.html");
+			$("#footer").load("pages/footer.html");
+		});
+	</script>
 
 	<script src="scripts/main.js"></script>
 </body>

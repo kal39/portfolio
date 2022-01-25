@@ -1,24 +1,16 @@
-const sectionCards = document.querySelectorAll(".section-card");
+const goToTopButton = document.querySelector(".go-to-top-button");
 const highlightItems = document.querySelectorAll(".highlight-item"); 
 
 function primaryColor() {
 	return getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
 }
-
 function primaryColorHighlighted() {
 	return getComputedStyle(document.documentElement).getPropertyValue("--primary-color-highlighted");
 }
 
-sectionCards.forEach(element => {
-	element.addEventListener("mouseenter", () => {
-		element.style.transform = "scale(1.1)";
-	});
-});
-
-sectionCards.forEach(element => {
-	element.addEventListener("mouseleave", () => {
-		element.style.transform = "scale(1)";
-	});
+goToTopButton.addEventListener("click", () => {
+	document.body.scrollTop = 0; // for safari
+	document.documentElement.scrollTop = 0; // for others
 });
 
 highlightItems.forEach(element => {
