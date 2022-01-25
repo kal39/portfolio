@@ -1,28 +1,30 @@
 
 :root,
 :root.dark {
-	--background-color: #171717;
-	--surface-color: #444444;
-	--surface-color-highlighted: #555555;
-	--surface-color-2: #222222;
-	--primary-color: #726a95;
-	--primary-color-highlighted: #9b8fd1;
+	--background-color: #121212;
+
+	--surface-color: #222222;
+	--surface-color-2: #353535;
 	--on-surface: #cdcdcd;
+
+	--primary-color: #552b77;
+	--primary-color-highlighted: #6b3696;
 }
 
 :root.light {
-	--background-color: #999999;
-	--surface-color: #c0c0c0;
-	--surface-color-highlighted: #dddddd;
-	--surface-color-2: #b0b0b0;
-	--primary-color: #ae9bff;
-	--primary-color-highlighted: #c9bdff;
-	--on-surface: #000000;
+	--background-color: #FFFFFF;
+
+	--surface-color: #e2e2e2;
+	--surface-color-2: #c9c9c9;
+	--on-surface: #121212;
+
+	--primary-color: #b577e7;
+	--primary-color-highlighted: #cd9cf5;
 }
 
 body {
 	margin: 1.5rem;
-	margin-top: 8rem;
+	margin-top: 10rem;
 	background-color: var(--background-color);
 	color: var(--on-surface);
 	font-family: "roboto";
@@ -69,9 +71,12 @@ a {
 	line-height: 1.5rem;
 }
 
-.navigation-bar-item {
+.highlight-item {
 	background-color: var(--primary-color);
 	color: var(--on-surface);
+}
+
+.navigation-bar-item {
 	text-align: center;
 	margin: 1rem;
 	padding: 0.5rem;
@@ -136,6 +141,7 @@ a {
 }
 
 .section-card-title {
+	color: var(--on-surface);
 	font-size: 1.5rem;
 	font-weight: bold;
 }
@@ -149,12 +155,48 @@ a {
 .section-card-description {
 	margin-top: 1em;
 	padding: 1rem;
+	color: var(--on-surface);
 	background-color: var(--primary-color);
 	border-radius: 1rem;
 }
 
+.contact {
+	margin: auto;
+	background-color: var(--surface-color);
+	color: var(--on-surface);
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.contact-title {
+	text-align: center;
+	color: var(--on-surface);
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.contact-method {
+	flex: 1;
+	background-color: var(--surface-color-2);
+	margin: 0.5rem;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	text-align: center;
+}
+
+.contact-link {
+	border-radius: 0.5rem;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+}
+
 @media only screen and (min-width: 34rem) {
 	.hero {
+		width: 30rem;
+	}
+
+	.contact {
 		width: 30rem;
 	}
 }
@@ -162,6 +204,14 @@ a {
 @media only screen and (min-width: 60rem) {
 	.hero {
 		width: 60rem;
+		display: flex;
+	}
+
+	.contact {
+		width: 56rem;
+	}
+
+	.contact-method-container {
 		display: flex;
 	}
 }

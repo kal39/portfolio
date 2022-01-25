@@ -2,16 +2,10 @@ const openMenu = document.querySelector(".open-menu-button");
 const closeMenu = document.querySelector(".close-menu-button");
 const navBar = document.querySelector(".navigation-bar");
 const sectionCards = document.querySelectorAll(".section-card"); 
-const navBarItems = document.querySelectorAll(".navigation-bar-item"); 
 const themeSwitchContainer = document.querySelector(".theme-switch-container");
 const themeSwitchSlider = document.querySelector(".theme-switch-slider");
+const highlightItems = document.querySelectorAll(".highlight-item"); 
 
-function surfaceColor() {
-	return getComputedStyle(document.documentElement).getPropertyValue("--surface-color");
-}
-function surfaceColorHighlighted() {
-	return getComputedStyle(document.documentElement).getPropertyValue("--surface-color-highlighted");
-}
 function primaryColor() {
 	return getComputedStyle(document.documentElement).getPropertyValue("--primary-color");
 }
@@ -29,25 +23,23 @@ closeMenu.addEventListener("click", () => {
 
 sectionCards.forEach(element => {
 	element.addEventListener("mouseenter", () => {
-		element.style.backgroundColor = surfaceColorHighlighted();
 		element.style.transform = "scale(1.1)";
 	});
 });
 
 sectionCards.forEach(element => {
 	element.addEventListener("mouseleave", () => {
-		element.style.backgroundColor = surfaceColor();
 		element.style.transform = "scale(1)";
 	});
 });
 
-navBarItems.forEach(element => {
+highlightItems.forEach(element => {
 	element.addEventListener("mouseenter", () => {
 		element.style.backgroundColor = primaryColorHighlighted();
 	});
 });
 
-navBarItems.forEach(element => {
+highlightItems.forEach(element => {
 	element.addEventListener("mouseleave", () => {
 		element.style.backgroundColor = primaryColor();
 	});
@@ -59,11 +51,7 @@ themeSwitchContainer.addEventListener("click", () => {
 	themeSwitchSlider.style.transform = darkModeOn ? "translateX(2rem)" : "translateX(0rem)";
 	document.documentElement.className = darkModeOn ? "dark" : "light";
 
-	sectionCards.forEach(element => {
-		element.style.backgroundColor = surfaceColor();
-	});
-
-	navBarItems.forEach(element => {
+	highlightItems.forEach(element => {
 		element.style.backgroundColor = primaryColor();
 	});
 });
