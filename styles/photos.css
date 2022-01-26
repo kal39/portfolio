@@ -1,0 +1,43 @@
+.photo-container {
+	background-color: var(--surface-color);
+	margin-bottom: 2rem;
+	padding: min(max(5%, 1rem), 2rem);
+	border-radius: 1rem;
+}
+
+.photo-title {
+	text-align: center;
+	background-color: var(--primary-color);
+	padding: 1rem;
+	border-radius: 1rem;
+	font-weight: bold;
+}
+
+.photo {
+	margin-top: min(max(5%, 1rem), 2rem);
+	border-radius: 1rem;
+	width: 100%;
+	cursor: pointer;
+}
+
+.background-shade {
+	display: none;
+	position: fixed;
+	z-index: 3;
+	background-color: black;
+	opacity: 80%;
+	top:0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.close-button {
+	display: none;
+	position: fixed;
+	z-index: 4;
+	font-size: 2rem;
+	top: 2rem;
+	right: 2rem;
+	cursor: pointer;
+}

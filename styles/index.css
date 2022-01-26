@@ -25,7 +25,7 @@
 }
 
 .section-card-image {
-	margin-top: 1em;
+	margin-top: 1rem;
 	width: 100%;
 	border-radius: 1rem;
 }
@@ -68,17 +68,7 @@
 	padding: 0.5rem;
 }
 
-@media only screen and (min-width: 34rem) {
-	.container {
-		width: 30rem;
-	}
-}
-
 @media only screen and (min-width: 60rem) {
-	.container {
-		width: 60rem;
-	}
-
 	.hero {
 		display: flex;
 	}
