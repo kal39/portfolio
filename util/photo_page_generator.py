@@ -13,9 +13,14 @@ out = "<section class=\"gallery\">"
 for fileName in sorted(os.listdir("assets/photos/"), reverse = True):
 	out += generate_photo_card("/".join(fileName.split("-")[0:3]), fileName)
 
-out += "\r</section>"
+out += """
+	<div class="background-shade"></div>
+	<div class="close-button"><i class="fas fa-times"></i></div>
+	<script src="scripts/photos.js"></script>
+</section>
+"""
 
 f = open("photo_gallery.html", "w")
-# f.write(out)
-print(out)
+f.write(out)
+# print(out)
 f.close()
