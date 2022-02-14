@@ -21,7 +21,66 @@
 <body>
 	<div class="container">
 		<div id="header"></div>
-		WIP
+
+		<section class="hero">
+
+			<div class="project-card">
+				<a class="project-link" href="vox_ren.html">
+					<div class="project-card-title">VoxRen</div>
+				</a>
+				<img class="project-card-image" src="assets/car.jpeg" alt="car">
+				<div class="technology-section">
+					<div class="technology-card">C</div>
+					<div class="technology-card">OpenCL</div>
+					<div class="technology-card">Python</div>
+					<div class="technology-card">Raylib</div>
+					<div class="technology-card">GUI app</div>
+				</div>
+				<div class="project-card-description">
+					A GPU pathtracer for voxel environments written in C and OpenCL (also some python scripts). It
+					supports lambert, metal, and light source materials, and I'm currently working on implementing
+					dielectric (transparent) materials. Very much WIP.
+				</div>
+			</div>
+
+			<div class="project-card">
+				<a class="project-link" href="ptmv.html">
+					<div class="project-card-title">ptmv</div>
+				</a>
+				<img class="project-card-image" src="assets/big_buck_bunny.gif" alt="video">
+				<div class="technology-section">
+					<div class="technology-card">Python</div>
+					<div class="technology-card">console app</div>
+				</div>
+				<div class="project-card-description">
+					A terminal app that can display static images and play videos (both local and from YouTube) by
+					using the unicode character "▄" as a set of two pixels. All main features have been implemented,
+					and it can be installed via PIP.
+				</div>
+			</div>
+
+			<div class="project-card">
+				<a class="project-link" href="itu.html">
+					<div class="project-card-title">imageToUnicode</div>
+				</a>
+				<img class="project-card-image" class="pixel-art" src="assets/train.jpeg" alt="train">
+				<div class="technology-section">
+					<div class="technology-card">C</div>
+					<div class="technology-card">Python</div>
+					<div class="technology-card">Single header C library</div>
+					<div class="technology-card">Python library</div>
+				</div>
+				<div class="project-card-description">
+					A project aimed to improve <a class="basic-link" href="ptmv.html">ptmv</a> by increasing the number
+					of unicode characters that can be used to display an image from 1 to 19. It is currently just a C
+					library, but I'm planning to make it into a python library (still using a C backend), and use it to
+					improve <a class="basic-link" href="ptmv.html">ptmv</a>.
+				</div>
+			</div>
+
+
+		</section>
+
 		<div id="footer"></div>
 	</div>
 

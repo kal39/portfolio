@@ -30,6 +30,11 @@ a {
 	margin: auto;
 }
 
+.basic-link {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 /* header */
 
 .main-header {

@@ -1,0 +1,55 @@
+.hero {
+	margin: auto;
+	align-items: flex-start;
+}
+
+.project-link {
+	flex: 1;
+	/* margin: 1rem; */
+}
+
+.project-card {
+	color: var(--on-surface);
+	margin-bottom: 1rem;
+	padding: 1rem;
+	text-align: center;
+	background-color: var(--surface-color);
+	border-radius: 1rem;
+	transition: transform .2s;
+}
+
+.project-card-title {
+	color: var(--on-surface);
+	background-color: var(--primary-color);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+.project-card-image {
+	margin-top: 1rem;
+	width: 100%;
+	border-radius: 1rem;
+}
+
+.technology-section {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.technology-card {
+	margin: 0rem 0.5rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 0.25rem;
+	background-color: var(--primary-color);
+}
+
+.project-card-description {
+	margin-top: 1em;
+	padding: 1rem;
+	color: var(--on-surface);
+	background-color: var(--surface-color-2);
+	border-radius: 1rem;
+}
