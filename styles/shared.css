@@ -35,6 +35,14 @@ a {
 	font-weight: bold;
 }
 
+.codeblock {
+	font-family: Monaco, monospace;
+	background-color: #351b4b;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	margin: 0.5rem 0rem;
+}
+
 /* header */
 
 .main-header {
