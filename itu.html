@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VoxRen</title>
+	<link rel="stylesheet" href="styles/shared.css">
+	<link rel="stylesheet" href="styles/project-page.css">
+	<link rel="icon" href="assets/logo.png">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<!-- main font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/4998c9c3e0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div id="header"></div>
+
+		<section class="hero">
+			<div class="title">imageToUnicode</div>
+
+			<div class="links">
+				<a href="https://github.com/kal39/itu">
+					<div class="link"><i class="fab fa-github"></i> GitHub</div>
+				</a>
+			</div>
+
+			<div class="text">
+				<p>
+					imageToUnicode is a C / python library I'm working on that extends the idea behind
+					<a class="basic-link" href="ptmv">ptmv</a>, and it aims to display more complex images using unicode
+					characters. I am eventually planning to improve ptmv using
+					this library.
+				</p>
+
+				<p>
+					The main difference between the graphics used in ptmv and imageToUnicode is that while ptmv only
+					uses that unicode character "▄", imageToUnicode uses the following 19 characters:
+				</p>
+
+				<div class="codeblock">
+					▁ ▂ ▃ ▄ ▅ ▆ ▇ <br><br>
+					▏ ▎ ▌ ▍ ▋ ▊ ▉ <br><br>
+					▝ ▘ ▗ ▖ ▚
+				</div>
+
+				<p>
+					Using these characters, imageToUnicode is able to find the best match for a particular cluster of
+					pixels, improving the accuracy of the final output.
+				</p>
+
+				<p>
+					Because the final goal of this project is to improve ptmv, performance is an important factor, as
+					ptmv is also used to play videos. This is the main reason that the main algorithm is written in C.
+					As well as being much faster than python, C also provides direct control over memory, greatly
+					reducing the number of wasteful operation performed. In addition, C supports true multithreading,
+					which is the main method I used to improve performance.
+				</p>
+
+				<p>
+					Multithreading was easy to implement for each row of the output image, as this has a good balance
+					between the number of threads and the time it takes to initialize a thread.
+				</p>
+
+				<p>
+					It is also possible to choose the level of detail wanted in the final output. This is done by
+					restricting the number of characters allowed to be used from 19 to some specified number. The lowest
+					level of detail uses a single character "▄", thus outputting the same image as the current
+					implementation of ptmv.
+				</p>
+
+				<p>
+					Here is a comparison between detail levels:
+				</p>
+
+				<div class="codeblock">detail = 0 (1 character used), same as ptmv</div>
+
+				<img class="image" src="assets/project_images/itu_detail0.png" alt="detail level 0">
+
+				<div class="codeblock">detail = 3 (6 character used)</div>
+
+				<img class="image" src="assets/project_images/itu_detail3.png" alt="detail level 3">
+
+				<div class="codeblock">detail = 6 (19 character used)</div>
+
+				<img class="image" src="assets/project_images/itu_detail6.png" alt="detail level 6">
+
+				<p>
+					As shown, at a detail level of 6, the image is extremely sharp, considering the fact that the entire
+					image is made up of characters. Although the detail level can be lowered, with the optimizations
+					currently implemented, the imageToUnicode can process images at fps suitable for ptmv.
+				</p>
+
+				<p>
+					Finally, here is what the image shown above (detail = 6) looks like without any colors:
+				</p>
+
+				<img class="image" src="assets/project_images/itu_nocolor.png" alt="no color">
+			</div>
+		</section>
+
+		<div id="footer"></div>
+	</div>
+
+	<script>
+		$(function () {
+			$("#header").load("shared/header.html");
+			$("#footer").load("shared/footer.html");
+		});
+	</script>
+
+	<script src="scripts/shared/highlight_item.js"></script>
+</body>
+
+</html>
