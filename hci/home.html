@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home</title>
 	<link rel="stylesheet" href="styles/shared.css">
+	<link rel="stylesheet" href="styles/home.css">
+	<script src="scripts/home.js" type="text/javascript" defer></script>
 	<!-- main font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,76 +18,51 @@
 </head>
 
 <body>
+	<div id="alarm-template" hidden>
+		<div class="alarm-container">
+			<div class="alarm-left-section">
+				<div class="alarm-name">__NAME__</div>
+				<div class="alarm-time">
+					<div class="alarm-hhmmss">__TIME__</div>
+					<div class="alarm-tz">__TIME_ZONE__</div>
+				</div>
+			</div>
+			<div class="alarm-right-section">
+				<div class="enable-disable">
+				</div>
+				<div class="three-dots">
+					<a id="settings-button">
+						<i class="fas fa-ellipsis-v"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="screen">
 		<div class="header">
 			Alarms
 		</div>
-		<div class="alarm-list">
-			<div class="alarm-container">
-				<div class="alarm-left-section">
-					<div class="alarm-name">Wake up</div>
-					<div class="alarm-time">
-						<div class="alarm-hhmmss">08:00.00</div>
-						<div class="alarm-tz">CET</div>
-					</div>
-				</div>
-				<div class="alarm-right-section">
-					<div class="enable-disable">
-						<i class="fas fa-toggle-on"></i>
-					</div>
-					<div class="three-dots">
-						<i class="fas fa-ellipsis-v"></i>
-					</div>
-				</div>
-			</div>
-
-			<div class="alarm-container">
-				<div class="alarm-left-section">
-					<div class="alarm-name">Join meeting A</div>
-					<div class="alarm-time">
-						<div class="alarm-hhmmss">12:30.00</div>
-						<div class="alarm-tz">UTC</div>
-					</div>
-				</div>
-				<div class="alarm-right-section">
-					<div class="enable-disable">
-						<i class="fas fa-toggle-on"></i>
-					</div>
-					<div class="three-dots">
-						<i class="fas fa-ellipsis-v"></i>
-					</div>
-				</div>
-			</div>
-
-			<div class="alarm-container">
-				<div class="alarm-left-section">
-					<div class="alarm-name">Join meeting B</div>
-					<div class="alarm-time">
-						<div class="alarm-hhmmss">15:30.00</div>
-						<div class="alarm-tz">UTC</div>
-					</div>
-				</div>
-				<div class="alarm-right-section">
-					<div class="enable-disable">
-						<i class="fas fa-toggle-on"></i>
-					</div>
-					<div class="three-dots">
-						<i class="fas fa-ellipsis-v"></i>
-					</div>
-				</div>
-			</div>
+		<div class="main-list", id="alarm-list">
+			
 		</div>
 
 		<div class="menu">
-			<div class="re-alarm-button">
-				<i class="fas fa-hourglass"></i>
-			</div>
-			<div class="alarm-button">
-				<i class="fas fa-clock"></i>
-			</div>
-			<div class="settings-button">
-				<i class="fa fa-cog" aria-hidden="true"></i>
-			</div>
+			<a href="new_timer.html">
+				<div class="re-alarm-button">
+					<i class="fas fa-hourglass"></i>
+				</div>
+			</a>
+			<a href="new_alarm.html">
+				<div class="alarm-button">
+					<i class="fas fa-clock"></i>
+				</div>
+			</a>
+			<a href="settings.html">
+				<div class="settings-button">
+					<i class="fa fa-cog"></i>
+				</div>
+			</a>
 		</div>
 	</div>
 </body>

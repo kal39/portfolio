@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="styles/shared.css">
+	<link rel="stylesheet" href="styles/new_alarm.css">
+	<script src="scripts/new_alarm.js" type="text/javascript" defer></script>
+	<!-- main font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/4998c9c3e0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="screen">
+		<div class="header">
+			<i class="fas fa-clock"></i> New Alarm
+		</div>
+		<div class="main-list">
+			<div class="option-container">
+				<input type="text" value="Alarm Name" class="big-option" id="option-name">
+			</div>
+
+			<div class="option-container">
+				<input type="time" step="1" value="08:00:00" class="big-option" id="option-time">
+			</div>
+
+			<div class="option-container">
+				Options
+				<div class="other-options-list">
+					<div class="option">
+						<div class="option-name">Timezone</div>
+						<div class="option-value"><input type="list" list="timezones" value="UTC" class="small-option" id="option-tz"></div>
+					</div>
+					<div class="option">
+						<div class="option-name">Vibration</div>
+						<div class="option-value"><input type="checkbox" class="small-option" id="option-vibration"></div>
+					</div>
+					<div class="option">
+						<div class="option-name">Sound</div>
+						<div class="option-value"><input type="checkbox" class="small-option" id="option-sound"></div>
+					</div>
+					<div class="option">
+						<div class="option-name">Repeat</div>
+						<div class="option-value"><input type="checkbox" class="small-option" id="option-repeat"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        
+        <div class="menu">
+            <a href="home.html">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+			<a href="home.html" id="submit-button">
+                <i class="fas fa-check"></i>
+            </a>
+		</div>
+		
+	</div>
+
+	<datalist id="timezones">
+		<option value="ACST">
+		<option value="ACT">
+		<option value="ACT">
+		<option value="ACWST">
+		<option value="ADT">
+		<option value="AEDT">
+		<option value="AEST">
+		<option value="AET">
+		<option value="AFT">
+		<option value="AKDT">
+		<option value="AKST">
+		<option value="ALMT">
+		<option value="AMST">
+		<option value="AMT">
+		<option value="AMT">
+		<option value="ANAT">
+		<option value="AQTT">
+		<option value="ART">
+		<option value="AST">
+		<option value="AST">
+		<option value="AWST">
+		<option value="AZOST">
+		<option value="AZOT">
+		<option value="AZT">
+		<option value="BNT">
+		<option value="BIOT">
+		<option value="BIT">
+		<option value="BOT">
+		<option value="BRST">
+		<option value="BRT">
+		<option value="BST">
+		<option value="BST">
+		<option value="BST">
+		<option value="BTT">
+		<option value="CAT">
+		<option value="CCT">
+		<option value="CDT">
+		<option value="CDT">
+		<option value="CEST">
+		<option value="CET">
+		<option value="CHADT">
+		<option value="CHAST">
+		<option value="CHOT">
+		<option value="CHOST">
+		<option value="CHST">
+		<option value="CHUT">
+		<option value="CIST">
+		<option value="CKT">
+		<option value="CLST">
+		<option value="CLT">
+		<option value="COST">
+		<option value="COT">
+		<option value="CST">
+		<option value="CST">
+		<option value="CST">
+		<option value="CT">
+		<option value="CVT">
+		<option value="CWST">
+		<option value="CXT">
+		<option value="DAVT">
+		<option value="DDUT">
+		<option value="DFT">
+		<option value="EASST">
+		<option value="EAST">
+		<option value="EAT">
+		<option value="ECT">
+		<option value="ECT">
+		<option value="EDT">
+		<option value="EEST">
+		<option value="EET">
+		<option value="EGST">
+		<option value="EGT">
+		<option value="EST">
+		<option value="ET">
+		<option value="FET">
+		<option value="FJT">
+		<option value="FKST">
+		<option value="FKT">
+		<option value="FNT">
+		<option value="GALT">
+		<option value="GAMT">
+		<option value="GET">
+		<option value="GFT">
+		<option value="GILT">
+		<option value="GIT">
+		<option value="GMT">
+		<option value="GST">
+		<option value="GST">
+		<option value="GYT">
+		<option value="HDT">
+		<option value="HAEC">
+		<option value="HST">
+		<option value="HKT">
+		<option value="HMT">
+		<option value="HOVST">
+		<option value="HOVT">
+		<option value="ICT">
+		<option value="IDLW">
+		<option value="IDT">
+		<option value="IOT">
+		<option value="IRDT">
+		<option value="IRKT">
+		<option value="IRST">
+		<option value="IST">
+		<option value="IST">
+		<option value="IST">
+		<option value="JST">
+		<option value="KALT">
+		<option value="KGT">
+		<option value="KOST">
+		<option value="KRAT">
+		<option value="KST">
+		<option value="LHST">
+		<option value="LHST">
+		<option value="LINT">
+		<option value="MAGT">
+		<option value="MART">
+		<option value="MAWT">
+		<option value="MDT">
+		<option value="MET">
+		<option value="MEST">
+		<option value="MHT">
+		<option value="MIST">
+		<option value="MIT">
+		<option value="MMT">
+		<option value="MSK">
+		<option value="MST">
+		<option value="MST">
+		<option value="MUT">
+		<option value="MVT">
+		<option value="MYT">
+		<option value="NCT">
+		<option value="NDT">
+		<option value="NFT">
+		<option value="NOVT">
+		<option value="NPT">
+		<option value="NST">
+		<option value="NT">
+		<option value="NUT">
+		<option value="NZDT">
+		<option value="NZST">
+		<option value="OMST">
+		<option value="ORAT">
+		<option value="PDT">
+		<option value="PET">
+		<option value="PETT">
+		<option value="PGT">
+		<option value="PHOT">
+		<option value="PHT">
+		<option value="PHST">
+		<option value="PKT">
+		<option value="PMDT">
+		<option value="PMST">
+		<option value="PONT">
+		<option value="PST">
+		<option value="PWT">
+		<option value="PYST">
+		<option value="PYT">
+		<option value="RET">
+		<option value="ROTT">
+		<option value="SAKT">
+		<option value="SAMT">
+		<option value="SAST">
+		<option value="SBT">
+		<option value="SCT">
+		<option value="SDT">
+		<option value="SGT">
+		<option value="SLST">
+		<option value="SRET">
+		<option value="SRT">
+		<option value="SST">
+		<option value="SST">
+		<option value="SYOT">
+		<option value="TAHT">
+		<option value="THA">
+		<option value="TFT">
+		<option value="TJT">
+		<option value="TKT">
+		<option value="TLT">
+		<option value="TMT">
+		<option value="TRT">
+		<option value="TOT">
+		<option value="TVT">
+		<option value="ULAST">
+		<option value="ULAT">
+		<option value="UTC">
+		<option value="UYST">
+		<option value="UYT">
+		<option value="UZT">
+		<option value="VET">
+		<option value="VLAT">
+		<option value="VOLT">
+		<option value="VOST">
+		<option value="VUT">
+		<option value="WAKT">
+		<option value="WAST">
+		<option value="WAT">
+		<option value="WEST">
+		<option value="WET">
+		<option value="WIB">
+		<option value="WIT">
+		<option value="WITA">
+		<option value="WGST">
+		<option value="WGT">
+		<option value="WST">
+		<option value="YAKT">
+		<option value="YEKT">
+	</datalist>
+</body>
+
+</html>
