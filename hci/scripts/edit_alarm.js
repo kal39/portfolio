@@ -6,9 +6,8 @@ if(id < JSON.parse(localStorage.getItem("alarms")).length) {
     document.getElementById("option-name").value = alarms[id].name;
     document.getElementById("option-time").value = alarms[id].time;
     document.getElementById("option-tz").value = alarms[id].timezone;
+    document.getElementById("title").innerHTML = "Edit alarm";
 }
-
-console.log(id)
 
 document.getElementById("submit-button").onclick = function() {
     alarm = {
