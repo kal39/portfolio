@@ -16,6 +16,8 @@ for(id = 0; id < alarms.length; id++) {
     addAlarm(alarms[id].name, alarms[id].time, alarms[id].timezone, id);
 }
 
+document.getElementById("new-alarm-button").setAttribute("href", "edit_alarm.html?id=" + alarms.length)
+
 function addAlarm(name, time, timezone, id) {
     alarm = alarmList.appendChild(alarmTemplate.cloneNode(true));
     alarm.querySelector(".alarm-name").innerHTML = name;
