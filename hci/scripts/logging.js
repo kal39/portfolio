@@ -1,6 +1,5 @@
 const userID = 0;
 
-console.log("req");
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "http://172.105.77.229:8080", true);
 xhr.send(
