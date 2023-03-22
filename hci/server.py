@@ -3,6 +3,7 @@
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from datetime import datetime
+import ssl
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -25,4 +26,10 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
 
-HTTPServer(('', 8080), Handler).serve_forever()
+server = HTTPServer(('', 80), Handler)
+
+server.socket = ssl.wrap_socket(server.socket,
+                                keyfile="privkey.pem",
+                                certfile="fullchain.pem", server_side=True)
+
+server.serve_forever()

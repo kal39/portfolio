@@ -1,7 +1,6 @@
 const id = new URLSearchParams(window.location.search).get("id");
 
 if (id < JSON.parse(localStorage.getItem("alarms")).length) {
-  console.log("AAA");
   alarms = JSON.parse(localStorage.getItem("alarms"));
   document.getElementById("option-name").value = alarms[id].name;
   document.getElementById("option-time").value = alarms[id].time;
