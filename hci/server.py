@@ -12,8 +12,7 @@ class Handler(BaseHTTPRequestHandler):
         body_len = int(self.headers["Content-Length"])
         body = self.rfile.read(body_len).decode("utf-8")
 
-        msg = str(time) + ": " + body + "\n"
-
+        msg = "[{}] [{}] {}\n".format(time, self.client_address[0], body)
         print(msg)
 
         f = open("log.txt", "a")
@@ -25,11 +24,12 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
 
+    def log_message(self, format, *args): return
 
-server = HTTPServer(('', 80), Handler)
 
-server.socket = ssl.wrap_socket(server.socket,
-                                keyfile="privkey.pem",
-                                certfile="fullchain.pem", server_side=True)
+context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+context.load_cert_chain("fullchain.pem", keyfile="privkey.pem")
 
+server = HTTPServer(('', 443), Handler)
+server.socket = context.wrap_socket(server.socket, server_side=True)
 server.serve_forever()
