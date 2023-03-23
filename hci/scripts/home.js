@@ -1,8 +1,12 @@
-const alarmTemplate =
-  document.getElementById("alarm-template").firstElementChild;
-const alarmList = document.getElementById("alarm-list");
+alarmTemplate = document.getElementById("alarm-template").firstElementChild;
+alarmList = document.getElementById("alarm-list");
+mode = new URLSearchParams(window.location.search).get("mode");
+mode = mode != null ? mode : 1;
 
-if (localStorage.alarms == undefined) {
+if (
+  localStorage.alarms == undefined ||
+  new URLSearchParams(window.location.search).get("reset")
+) {
   alarms = [
     { name: "Wake up", time: "08:00:00", timezone: "CET", enabled: true },
     {
@@ -29,7 +33,14 @@ for (id = 0; id < alarms.length; id++) {
 
 document
   .getElementById("new-alarm-button")
-  .setAttribute("href", "edit_alarm.html?id=" + alarms.length);
+  .setAttribute(
+    "href",
+    "edit_alarm.html?mode=" + mode + "&id=" + alarms.length
+  );
+
+document
+  .getElementById("settings-button")
+  .setAttribute("href", "settings.html?mode=" + mode);
 
 function addAlarm(name, time, timezone, id) {
   alarm = alarmList.appendChild(alarmTemplate.cloneNode(true));
@@ -38,7 +49,7 @@ function addAlarm(name, time, timezone, id) {
   alarm.querySelector(".alarm-tz").innerHTML = timezone;
   alarm
     .querySelector("#settings-button")
-    .setAttribute("href", "edit_alarm.html?id=" + id);
+    .setAttribute("href", "edit_alarm.html?mode=" + mode + "&id=" + id);
   alarm.querySelector(".enable-disable").onclick = function () {
     alarms = JSON.parse(localStorage.getItem("alarms"));
     alarms[id].enabled = !alarms[id].enabled;
@@ -62,3 +73,5 @@ function updateAlarmButton(id, enabled) {
     alarm.querySelector(".enable-disable").style.color = "#C9364C";
   }
 }
+
+// alert("Hello! I am an alert box!!");
