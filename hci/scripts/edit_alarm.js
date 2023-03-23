@@ -56,7 +56,14 @@ if (mode == 1) {
     document.getElementById("back-button").onclick = start_time_section;
     document.getElementById("submit-button").onclick = () => {
       timezone = document.getElementById("option-tz").value;
-      if (confirm("The timezone is set to " + timezone + ", continue?")) {
+      if (
+        confirm(
+          "The timezone is set to " +
+            timezone +
+            "\nand the alarm will go off in __h __m __s\ncontinue?" +
+            "\n(the `__`s are placeholders)"
+        )
+      ) {
         submit();
         window.location.href = "home.html?mode=" + mode;
       } else {
