@@ -1,92 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="icon" href="assets/logo.png" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- main font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4998c9c3e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-	<link rel="stylesheet" href="styles/shared.css">
-	<link rel="stylesheet" href="styles/index.css">
-	<link rel="icon" href="assets/logo.png">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<!-- main font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-	<!-- font awesome -->
-	<script src="https://kit.fontawesome.com/4998c9c3e0.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <div class="container">
+      <div id="header"></div>
 
-<body>
-	<div class="container">
-		<div id="header"></div>
+      <div class="hero">
+        <a class="section-link" href="section_projects.html">
+          <div class="section-card">
+            <div class="section-card-title">Projects</div>
+            <img class="section-card-image" src="assets/car.jpeg" alt="car" />
+            <div class="section-card-description">
+              Descriptions and brief introductions to some of the main projects
+              I'm working on.
+            </div>
+          </div>
+        </a>
+        <a class="section-link" href="section_photos.html">
+          <div class="section-card">
+            <div class="section-card-title">Photos</div>
+            <img class="section-card-image" src="assets/train.jpeg" alt="car" />
+            <div class="section-card-description">
+              A gallery of a number of photos I've taken over the years in a
+              number of countries.
+            </div>
+          </div>
+        </a>
+        <a class="section-link" href="section_art.html">
+          <div class="section-card">
+            <div class="section-card-title">Art</div>
+            <img
+              class="section-card-image"
+              src="https://via.placeholder.com/200x100?text=WIP"
+              alt="car"
+            />
+            <div class="section-card-description">
+              A showcase of some art projects I've worked on (WIP).
+            </div>
+          </div>
+        </a>
+      </div>
 
-		<section class="hero">
-			<a class="section-link" href="projects.html">
-				<div class="section-card">
-					<div class="section-card-title">Projects</div>
-					<img class="section-card-image" src="assets/car.jpeg" alt="car">
-					<div class="section-card-description">
-						Descriptions and brief introductions to some of the main projects I'm working on.
-					</div>
+      <div class="contact">
+        <div class="contact-title">Contact</div>
+        <div class="contact-method-container">
+          <div class="contact-method">
+            <b>Email</b> <br />
+            <a href="mailto:kaikitagawajones@gmail.com">
+              <div class="contact-link highlight-item">
+                <i class="fas fa-envelope"></i> kaikitagawajones@gmail.com
+              </div>
+            </a>
+          </div>
+          <div class="contact-method">
+            <b>GitHub</b> <br />
+            <a href="https://github.com/kal39">
+              <div class="contact-link highlight-item">
+                <i class="fab fa-github"></i> kal39
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
 
-				</div>
-			</a>
-			<a class="section-link" href="photos.html">
-				<div class="section-card">
-					<div class="section-card-title">Photos</div>
-					<img class="section-card-image" src="assets/train.jpeg" alt="car">
-					<div class="section-card-description">
-						A gallery of a number of photos I've taken over the years in a number of countries.
-					</div>
-				</div>
-			</a>
-			<a class="section-link" href="art.html">
-				<div class="section-card">
-					<div class="section-card-title">Art</div>
-					<img class="section-card-image" src="https://via.placeholder.com/200x100?text=WIP" alt="car">
-					<div class="section-card-description">
-						A showcase of some art projects I've worked on (WIP).
-					</div>
-				</div>
-			</a>
-		</section>
+      <div id="footer"></div>
+    </div>
 
-		<section class="contact">
-			<div class="contact-title">Contact</div>
-			<div class="contact-method-container">
-				<div class="contact-method">
-					<b>Email</b> <br>
-					<a href="mailto:kaikitagawajones@gmail.com">
-						<div class="contact-link highlight-item">
-							<i class="fas fa-envelope"></i> kaikitagawajones@gmail.com
-						</div>
-					</a>
-				</div>
-				<div class="contact-method">
-					<b>GitHub</b> <br>
-					<a href="https://github.com/kal39">
-						<div class="contact-link highlight-item">
-							<i class="fab fa-github"></i> kal39
-						</div>
-					</a>
-				</div>
-			</div>
-		</section>
+    <script>
+      $(function () {
+        $("#header").load("shared/header.html");
+        $("#footer").load("shared/footer.html");
+      });
+    </script>
 
-		<div id="footer"></div>
-	</div>
-
-	<script>
-		$(function () {
-			$("#header").load("shared/header.html");
-			$("#footer").load("shared/footer.html");
-		});
-	</script>
-
-	<script src="scripts/shared/highlight_item.js"></script>
-	<script src="scripts/index.js"></script>
-</body>
-
+    <script src="scripts/shared/highlight_item.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
 </html>

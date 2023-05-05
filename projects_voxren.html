@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoxRen</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/project-page.css" />
+    <link rel="icon" href="assets/logo.png" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- main font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4998c9c3e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="header"></div>
+
+      <div class="hero">
+        <div class="title">VoxRen</div>
+
+        <div class="links">
+          <a href="https://github.com/kal39/VoxRen">
+            <div class="link"><i class="fab fa-github"></i> GitHub</div>
+          </a>
+        </div>
+
+        <div class="text">
+          <p>
+            VoxRen is a voxel-based pathtracer with support for real-time
+            editing of the scene and multiple material types. By using GPU
+            acceleration (with OpenCL), the pathtracing takes place in
+            real-time. The program also contains a full GUI that helps the user
+            easily modify the scene, and a Python module was also written so
+            that a scene can also be easily created using scripts.
+          </p>
+
+          <p>
+            All GPU-side code was written using OpenCL so that it would run on a
+            wider range of hardware, like my laptop (with Intel Iris integrated
+            graphics), compared to CUDA. On the other hand, most CPU-side code
+            (the GUI and various other processes) was written in C, except the
+            scene-generation code that was written in Python.
+          </p>
+
+          <p>
+            The GUI was implemented using
+            <a class="basic-link" href="https://www.raylib.com/">raylib</a>, a
+            library that provides a large number of graphics related features
+            aimed at game development. All GUI components (windows, buttons,
+            text-inputs) were implemented from scratch using basic features from
+            this library. Although the GUI is far from perfect, building an
+            entire GUI system from scratch taught me a lot about GUIs and
+            graphics in general. This is a screenshot of the GUI in action:
+          </p>
+
+          <img
+            class="image"
+            src="assets/project_images/voxren_gui.jpeg"
+            alt="gui showcase"
+          />
+
+          <p>The GUI allows the user to perform a number of actions such as:</p>
+
+          <ul>
+            <li>
+              Select a material type, color, and properties, and place it in the
+              scene using the mouse
+            </li>
+            <li>
+              Set various camera parameters, such as position orientation,
+              exposure, etc
+            </li>
+            <li>Change the color and brightness of the background</li>
+            <li>Change the movement speed and mouse sensitivity</li>
+          </ul>
+
+          <p>And many more.</p>
+
+          <p>
+            The Python module can be used in scripts to easily create large
+            scenes, to visualize some mathematical model, or to visualize data.
+            For example using heightmap data of the Earth, I was able to make a
+            3D map of Spain:
+          </p>
+
+          <img
+            class="image"
+            src="assets/project_images/voxren_spain_gui.jpeg"
+            alt="spain"
+          />
+
+          <p>Finally, here are some renders I made using VoxRen:</p>
+
+          <img
+            class="image"
+            src="assets/project_images/voxren_car.jpeg"
+            alt="car"
+          />
+          <img
+            class="image"
+            src="assets/project_images/voxren_spain.jpeg"
+            alt="spain"
+          />
+          <img
+            class="image"
+            src="assets/project_images/voxren_seasia.jpeg"
+            alt="se asia"
+          />
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#header").load("shared/header.html");
+        $("#footer").load("shared/footer.html");
+      });
+    </script>
+
+    <script src="scripts/shared/highlight_item.js"></script>
+  </body>
+</html>
