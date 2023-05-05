@@ -35,3 +35,12 @@
 	width: 100%;
 	margin: 1rem 0rem;
 }
+
+pre code {
+	font-family: monospace;
+	background-color: var(--surface-color-2);
+	border: 1px solid var(--on-surface);
+	display: block;
+	padding: 1rem;
+	border-radius: 1rem;
+}

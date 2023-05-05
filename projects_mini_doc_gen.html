@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This website</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/project-page.css" />
+    <link rel="icon" href="assets/logo.png" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- main font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/4998c9c3e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="header"></div>
+
+      <div class="hero">
+        <div class="title">mini_doc_gen</div>
+
+        <div class="links">
+          <a
+            href="https://gist.github.com/kal39/26e870d9436c06b2fece78f19a755fbc"
+          >
+            <div class="link"><i class="fab fa-github"></i> GitHub</div>
+          </a>
+        </div>
+
+        <div class="text">
+          <p>
+            This is a tiny python script (only 30 loc) that given a c file,
+            generates documentation for it. The output is a markdown file,
+            making it ideal for use with github. The full code is shown below:
+          </p>
+
+          <img class="image" src="assets/mini_doc_gen.png" alt="code" />
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#header").load("shared/header.html");
+        $("#footer").load("shared/footer.html");
+      });
+    </script>
+
+    <script src="scripts/shared/highlight_item.js"></script>
+  </body>
+</html>
