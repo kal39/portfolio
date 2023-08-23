@@ -12,15 +12,9 @@
     <!-- main font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/4998c9c3e0.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/4998c9c3e0.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -31,7 +25,6 @@
         <a class="project-link" href="projects_voxren.html">
           <div class="project-card">
             <div class="project-card-title">VoxRen</div>
-
             <img class="project-card-image" src="assets/car.jpeg" alt="car" />
             <div class="technology-section">
               <div class="technology-card">C</div>
@@ -39,57 +32,25 @@
               <div class="technology-card">Python</div>
             </div>
             <div class="project-card-description">
-              A GPU pathtracer for voxel environments written in C and OpenCL
-              (also some python scripts). It supports lambert, metal, and light
-              source materials, and I'm currently working on implementing
-              dielectric (transparent) materials. Very much WIP.
+              A GPU pathtracer for voxel environments written in C and OpenCL (also some python scripts). It supports
+              lambert, metal, and light source materials, and I'm currently working on implementing dielectric
+              (transparent) materials. Very much WIP.
             </div>
           </div>
         </a>
 
-        <a class="project-link" href="projects_ptmv.html">
+        <a class="project-link" href="projects_doi_lookup.html">
           <div class="project-card">
-            <div class="project-card-title">ptmv</div>
-
-            <img
-              class="project-card-image"
-              src="assets/big_buck_bunny.gif"
-              alt="video"
-            />
+            <div class="project-card-title">DOI Lookup</div>
+            <img class="project-card-image" class="pixel-art" src="assets/doi_lookup.png" alt="train" />
             <div class="technology-section">
-              <div class="technology-card">Python</div>
+              <div class="technology-card">HTML</div>
+              <div class="technology-card">CSS</div>
+              <div class="technology-card">JavaScript</div>
             </div>
             <div class="project-card-description">
-              A terminal app that can display static images and play videos
-              (both local and from YouTube) by using the unicode character "▄"
-              as a set of two pixels. All main features have been implemented,
-              and it can be installed via PIP.
-            </div>
-          </div>
-        </a>
-
-        <a class="project-link" href="projects_itu.html">
-          <div class="project-card">
-            <div class="project-card-title">imageToUnicode</div>
-
-            <img
-              class="project-card-image"
-              class="pixel-art"
-              src="assets/train.jpeg"
-              alt="train"
-            />
-            <div class="technology-section">
-              <div class="technology-card">C</div>
-              <div class="technology-card">Python</div>
-            </div>
-            <div class="project-card-description">
-              A project aimed to improve
-              <a class="basic-link" href="projects_ptmv.html">ptmv</a> by
-              increasing the number of unicode characters that can be used to
-              display an image from 1 to 19. It is currently just a C library,
-              but I'm planning to make it into a python library (still using a C
-              backend), and use it to improve
-              <a class="basic-link" href="projects_ptmv.html">ptmv</a>.
+              A webapp to lookup research articles. In addition to providing basic information about articles, the main
+              focus of the tool is to show the relationship between articles.
             </div>
           </div>
         </a>
@@ -97,41 +58,58 @@
         <a class="project-link" href="projects_mini_doc_gen.html">
           <div class="project-card">
             <div class="project-card-title">mini_doc_gen.py</div>
+            <img class="project-card-image" class="pixel-art" src="assets/mini_doc_gen.png" alt="train" />
+            <div class="technology-section">
+              <div class="technology-card">Python</div>
+            </div>
+            <div class="project-card-description">A tiny documentation generation tool written in python.</div>
+          </div>
+        </a>
 
-            <img
-              class="project-card-image"
-              class="pixel-art"
-              src="assets/mini_doc_gen.png"
-              alt="train"
-            />
+        <a class="project-link" href="projects_ptmv.html">
+          <div class="project-card">
+            <div class="project-card-title">ptmv</div>
+            <img class="project-card-image" src="assets/big_buck_bunny.gif" alt="video" />
             <div class="technology-section">
               <div class="technology-card">Python</div>
             </div>
             <div class="project-card-description">
-              A tiny documentation generation tool written in python.
+              A terminal app that can display static images and play videos (both local and from YouTube) by using the
+              unicode character "▄" as a set of two pixels. All main features have been implemented, and it can be
+              installed via PIP.
             </div>
           </div>
         </a>
-      </div>
+
+        <a class="project-link" href="projects_itu.html">
+          <div class="project-card">
+            <div class="project-card-title">imageToUnicode</div>
+            <img class="project-card-image" class="pixel-art" src="assets/train.jpeg" alt="train" />
+            <div class="technology-section">
+              <div class="technology-card">C</div>
+              <div class="technology-card">Python</div>
+            </div>
+            <div class="project-card-description">
+              A project aimed to improve
+              <a class="basic-link" href="projects_ptmv.html">ptmv</a> by increasing the number of unicode characters
+              that can be used to display an image from 1 to 19. It is currently just a C library, but I'm planning to
+              make it into a python library (still using a C backend), and use it to improve
+              <a class="basic-link" href="projects_ptmv.html">ptmv</a>.
+            </div>
+          </div>
+        </a>
 
         <a class="project-link" href="projects_website.html">
           <div class="project-card">
             <div class="project-card-title">this website</div>
-
-            <img
-              class="project-card-image"
-              class="pixel-art"
-              src="assets/website.png"
-              alt="train"
-            />
+            <img class="project-card-image" class="pixel-art" src="assets/website.png" alt="train" />
             <div class="technology-section">
               <div class="technology-card">HTML</div>
               <div class="technology-card">CSS</div>
               <div class="technology-card">JavaScript</div>
             </div>
             <div class="project-card-description">
-              A website that showcases the projects, photos, and art I've worked
-              on over the years.
+              A website that showcases the projects, photos, and art I've worked on over the years.
             </div>
           </div>
         </a>

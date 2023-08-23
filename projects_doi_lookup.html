@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOI Lookup</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/project-page.css" />
+    <link rel="icon" href="assets/logo.png" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- main font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4998c9c3e0.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="header"></div>
+
+      <div class="hero">
+        <div class="title">DOI Lookup</div>
+
+        <div class="links">
+          <a href="https://github.com/kal39/doi_lookup">
+            <div class="link"><i class="fab fa-github"></i> GitHub</div>
+          </a>
+        </div>
+
+        <div class="text">
+          <p>
+            A simple
+            <a class="basic-link" href="https://www.doi.org/the-identifier/what-is-a-doi/">DOI</a>
+            lookup tool available at
+            <a class="basic-link" href="https://doi.kaikitagawajones.com">doi.kaikitagawajones.com</a>.
+          </p>
+
+          <p>
+            The main focus of the tool is to shown relationships (citations and references) between articles, as shown
+            below. This information is provided by the
+            <a class="basic-link" href="https://opencitations.net/index/api/v1">
+              OpenCitations Indexes unifying REST API</a
+            >.
+          </p>
+
+          <img class="image" src="assets/project_images/doi_rel.png" alt="relationships" />
+
+          <p>
+            Basic information about the article is also shown using information provided by the
+            <a class="basic-link" href="https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+              >Crossref REST API</a
+            >:
+          </p>
+
+          <img class="image" src="assets/project_images/doi_title.png" alt="title" />
+
+          <img
+            class="image"
+            src="assets/project_images/doi_details.png"
+            style="width: 50%; display: block; margin-left: auto; margin-right: auto"
+            alt="details"
+          />
+
+          <p>
+            In addition, easy-to-copy citations are also provided in plaintext, BibTeX, and RIS. The citation text is
+            taken directly from <a class="basic-link" href="https://www.doi.org/">doi.org</a>.
+            <a class="basic-link" href="https://citation.crosscite.org/docs.html">This document</a> provides a good
+            explanation of how this process works.
+          </p>
+
+          <img
+            class="image"
+            src="assets/project_images/doi_cite.png"
+            style="width: 50%; display: block; margin-left: auto; margin-right: auto"
+            alt="details"
+          />
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#header").load("shared/header.html");
+        $("#footer").load("shared/footer.html");
+      });
+    </script>
+
+    <script src="scripts/shared/highlight_item.js"></script>
+  </body>
+</html>
