@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOI Lookup</title>
+    <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/project-page.css" />
+    <link rel="icon" href="assets/logo.png" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- main font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4998c9c3e0.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="header"></div>
+
+      <div class="hero">
+        <div class="title">microcompute</div>
+
+        <div class="links">
+          <a href="https://github.com/kal39/microcompute">
+            <div class="link"><i class="fab fa-github"></i> GitHub</div>
+          </a>
+          <a href="https://github.com/kal39/microcompute/blob/main/doc.md">
+            <div class="link">Docs</div>
+          </a>
+        </div>
+
+        <div class="text">
+          <p>A small and simple library to use run shaders in Vulkan. Currently work-in-progress.</p>
+
+          <p>
+            The library will be used for any upcoming projects that require GPU computing. It simplifies the process of
+            running computations on the GPU, and is a wrapper around Vulkan
+          </p>
+
+          <p>
+            The following render of the Mandelbrot set (1920x1080, -0.7615 - 0.08459i, 1000x zoom, 500 iterations) was
+            rendered in about 0.05 seconds, and the same render at 3840x2160 takes approximately 0.2 seconds to render.
+          </p>
+
+          <img class="image" src="assets/mandelbrot.jpeg" alt="mandelbrot" />
+        </div>
+      </div>
+
+      <div id="footer"></div>
+    </div>
+
+    <script>
+      $(function () {
+        $("#header").load("shared/header.html");
+        $("#footer").load("shared/footer.html");
+      });
+    </script>
+
+    <script src="scripts/shared/highlight_item.js"></script>
+  </body>
+</html>
